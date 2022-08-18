@@ -31,12 +31,12 @@ namespace RandomQuoteApp.Pages.Quotes
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Quote == null || Quote == null)
+          if (!ModelState.IsValid || _context.Quotes == null || Quote == null)
             {
                 return Page();
             }
 
-            _context.Quote.Add(Quote);
+            _context.Quotes.Add(Quote);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

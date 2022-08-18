@@ -23,12 +23,12 @@ namespace RandomQuoteApp.Pages.Quotes
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Quote == null)
+            if (id == null || _context.Quotes == null)
             {
                 return NotFound();
             }
 
-            var quote = await _context.Quote.FirstOrDefaultAsync(m => m.Id == id);
+            var quote = await _context.Quotes.FirstOrDefaultAsync(m => m.Id == id);
             if (quote == null)
             {
                 return NotFound();

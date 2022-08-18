@@ -14,6 +14,6 @@ namespace RandomQuoteApp.Data
         {
         }
 
-        public DbSet<RandomQuoteApp.Models.Quote> Quote { get; set; } = default!;
+        public DbSet<RandomQuoteApp.Models.Quote> Quotes { get; set; } = default!;
     }
 }
